@@ -1,7 +1,7 @@
 from .serializers import (BlogPostSerializer, CategorySerializer, CommentSerializer)
 
 from rest_framework import generics
-from rest_framework.permissions import IsAdminUser
+from rest_framework.permissions import (IsAdminUser, IsAuthenticatedOrReadOnly)
 from blog.models import (BlogPost, Category, Comment)
 
 
@@ -39,7 +39,7 @@ class CommentListAPIView(generics.ListCreateAPIView):
 class CommentRudAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    permission_class = []
+    permission_class = [IsAuthenticatedOrReadOnly]
     lookup_field = 'pk'
 
 

@@ -1,0 +1,116 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<title>Simple Blog Back-end</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'css/home.css' %}">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-primary fixed-top">
+			<a class="navbar-brand" href="#">
+				Blog Backend
+			</a>
+		</nav>
+		<br />
+		<br />
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-4">Backend Docs</h1>
+				<p class="lead">A simple documentation to get you started with this simple RESTful Blog backend.</p>
+			</div>
+		</div>
+		<div class="container text-centered">
+			<br />
+			<h3>Making Blog Posts</h3>
+			<br />
+			<p>
+			To create blog posts, user has to be authenticated and must be the admin. Settings can be changed to suit applications. To create or list blog post, http requests must be made to the endpoint: 
+			<br />
+			<ul>
+				<li>
+					<strong>http://localhost:8000/api/blogposts/</strong>
+				</li>
+			</ul>
+			<br />
+			To make GET, PATCH or DELETE requests on a blog post instance, the http verbs must act on the endpoint:
+			<br />
+			<ul>
+				<li>
+					<strong>http://localhost:8000/api/blogposts/pk/</strong>
+				</li>
+			</ul>
+					<br/>
+					Example of this are http://localhost:8000/api/blogposts/1/, http://localhost:8000/api/blogposts/2/, etc.
+			</p>
+			<br />
+
+			<h3>Making Categories</h3>
+			<br />
+			<p>
+			To create categories, user has to be authenticated and must be the admin. Settings can be changed to suit applications. To create or list categories, http requests must be made to the endpoint: 
+			<br />
+			<ul>
+				<li>
+					<strong>http://localhost:8000/api/categories/</strong>
+				</li>
+			</ul>
+			<br />
+			To make GET, PATCH or DELETE requests on a category instance, the http verbs must act on the endpoint:
+			<br />
+			<ul>
+				<li>
+					<strong>http://localhost:8000/api/categories/pk/</strong>
+				</li>
+			</ul>
+					<br/>
+					Example of this are http://localhost:8000/api/categories/1/, http://localhost:8000/api/categories/2/, etc.
+			</p>
+			<br />
+
+			<h3>Making Comments</h3>
+			<br />
+			<p>
+			To create comments, user does NOT have to be authenticated and must be the admin. Settings can be changed to suit applications. To create or list comments, http requests must be made to the endpoint: 
+			<br />
+			<ul>
+				<li>
+					<strong>http://localhost:8000/api/comments/</strong>
+				</li>
+			</ul>
+			<br />
+			Only admins can perform RUD operations on comments.
+			To make GET, PATCH or DELETE requests on a comment instance, the http verbs must act on the endpoint:
+			<br />
+			<ul>
+				<li>
+					<strong>http://localhost:8000/api/comments/pk/</strong>
+				</li>
+			</ul>
+					<br/>
+					Example of this are http://localhost:8000/api/comments/1/, http://localhost:8000/api/comments/2/, etc.
+			</p>
+			<br />
+		</div>
+
+
+		<!-- Footer -->
+<footer class="page-footer font-small blue bg-primary">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://github.com/laybug/portfolio">LayBug</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	</body>
+</html>
