@@ -24,13 +24,11 @@ class BlogPostSerializer(serializers.ModelSerializer):
             'user',
             'title',
             'date',
-            'body',
             'category',
+            'body',
             #'image.url'
             'comments',
             ]
-        depth = 1
-
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
