@@ -9,5 +9,7 @@ urlpatterns = [
         path('api/comments/', views.CommentListAPIView.as_view(), name = 'commentsListAPIView'),
         path('api/comments/<int:pk>/', views.CommentRudAPIView.as_view(), name = 'commentRudView'),
 
+        path('api/users/', views.UserListAPIView.as_view(), name = 'usersListAPIView'),
+        path('api/users/<int:pk>/', views.UserRudAPIView.as_view(), name = 'userRudView'),
         ]
 
